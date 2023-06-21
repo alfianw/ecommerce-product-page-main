@@ -9,32 +9,52 @@
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+  <div class="container">
+    <header>
+      <nav>
+        <ul id="list">
+          <li><h1>sneakers</h1></li>
+          <li><a href="">Collections</a></li>
+          <li><a href="">Men</a></li>
+          <li><a href="">Women</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+        <div class="warpNav">
+          <img src="./images/icon-cart.svg" alt="">
+          <img src="./images/image-avatar.png" alt="" id="avatar">
+        </div>
+      </nav>
+    </header>
+    <div class="containerBody">
+      <div class="warp1">
+        <img src="./images/image-product-1.jpg" alt="" id="imgContain">
+        <div class="card1">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="" id="imgList">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="" id="imgList">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="" id="imgList">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="" id="imgList">
+        </div>
+      </div>
+      <div class="warp2">
+        <p id="art1">SNEAKER COMPANY</p>
+        <h1 id="art2">Fall Limited Edition Sneakers</h1>
+        <p id="art3">These low-profile sneakers are you perfect casual waar companion. Featuring a durable rubble outer sole, they'll withstand everything the wearther can offer.</p>
+        <h2 id="art4">$123.00 <span id="label">50%</span></h2>
+        <p>$250.00</p>
+        <div class="btn">
+          <div class="btn2">
+            <button id="pulusMinus"><img src="./images/icon-minus.svg" alt=""></button>
+            <p>0</p>
+            <button id="pulusMinus"><img src="./images/icon-plus.svg" alt=""></button>
+          </div>
+          <button id="btn1"><img src="./images/icon-cart.svg" alt="">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
