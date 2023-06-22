@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
   <div class="container">
     <header>
       <nav>
         <ul id="list">
-          <li><h1>sneakers</h1></li>
+          <li>
+            <h1>sneakers</h1>
+          </li>
           <li><a href="">Collections</a></li>
           <li><a href="">Men</a></li>
           <li><a href="">Women</a></li>
           <li><a href="">About</a></li>
         </ul>
         <div class="warpNav">
-          <img src="./images/icon-cart.svg" alt="">
+          <img src="./images/icon-cart copy.svg" alt="">
           <img src="./images/image-avatar.png" alt="" id="avatar">
         </div>
       </nav>
     </header>
     <div class="containerBody">
       <div class="warp1">
-        <img src="./images/image-product-1.jpg" alt="" id="imgContain">
+        <img src="./images/image-product-1.jpg" alt="Gambar" id="imgContain" onclick="myFunction()">
         <div class="card1">
           <img src="./images/image-product-1-thumbnail.jpg" alt="" id="imgList">
           <img src="./images/image-product-2-thumbnail.jpg" alt="" id="imgList">
@@ -41,9 +46,10 @@
       <div class="warp2">
         <p id="art1">SNEAKER COMPANY</p>
         <h1 id="art2">Fall Limited Edition Sneakers</h1>
-        <p id="art3">These low-profile sneakers are you perfect casual waar companion. Featuring a durable rubble outer sole, they'll withstand everything the wearther can offer.</p>
+        <p id="art3">These low-profile sneakers are you perfect casual waar companion. Featuring a durable rubble outer
+          sole, they'll withstand everything the wearther can offer.</p>
         <h2 id="art4">$123.00 <span id="label">50%</span></h2>
-        <p>$250.00</p>
+        <p id="art5">$250.00</p>
         <div class="btn">
           <div class="btn2">
             <button id="pulusMinus"><img src="./images/icon-minus.svg" alt=""></button>
@@ -55,10 +61,27 @@
       </div>
     </div>
   </div>
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <div class="modal" id="modals">
+    <button onclick="closeModal()" id="btnClose"><img src="./images/icon-close.svg" alt=""></button>
+    <div class="warpModal">
+      <img src="./images/image-product-1.jpg" alt="" id="imgModal" class="imgModal">
+      <div class="card1">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="" id="imgList">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="" id="imgList">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="" id="imgList">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="" id="imgList">
+      </div>
+    </div>
+  </div>
 </body>
+
+<script src="index.js">
+</script>
+
 </html>
