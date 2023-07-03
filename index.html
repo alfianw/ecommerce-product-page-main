@@ -28,7 +28,7 @@
           <li><a href="">About</a></li>
         </ul>
         <div class="warpNav">
-          <img src="./images/icon-cart copy.svg" alt="">
+          <img src="./images/icon-cart copy.svg" alt="" style="cursor: pointer">
           <img src="./images/image-avatar.png" alt="" id="avatar">
         </div>
       </nav>
@@ -37,10 +37,14 @@
       <div class="warp1">
         <img src="./images/image-product-1.jpg" alt="Gambar" id="imgContain" onclick="myFunction()">
         <div class="card1">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="" id="imgList">
-          <img src="./images/image-product-2-thumbnail.jpg" alt="" id="imgList">
-          <img src="./images/image-product-3-thumbnail.jpg" alt="" id="imgList">
-          <img src="./images/image-product-4-thumbnail.jpg" alt="" id="imgList">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="" id="imgList"
+            onclick="tampilkanFoto('./images/image-product-1.jpg')">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="" id="imgList"
+            onclick="tampilkanFoto('./images/image-product-2.jpg')">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="" id="imgList"
+            onclick="tampilkanFoto('./images/image-product-3.jpg')">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="" id="imgList"
+            onclick="tampilkanFoto('./images/image-product-4.jpg')">
         </div>
       </div>
       <div class="warp2">
@@ -52,9 +56,9 @@
         <p id="art5">$250.00</p>
         <div class="btn">
           <div class="btn2">
-            <button id="pulusMinus"><img src="./images/icon-minus.svg" alt=""></button>
-            <p>0</p>
-            <button id="pulusMinus"><img src="./images/icon-plus.svg" alt=""></button>
+            <button id="pulusMinus" onclick="kurangProduk()"><img src="./images/icon-minus.svg" alt=""></button>
+            <p id="jumlahProduk">0</p>
+            <button id="pulusMinus" onclick="tambahProduk()"><img src="./images/icon-plus.svg" alt=""></button>
           </div>
           <button id="btn1"><img src="./images/icon-cart.svg" alt="">Add to cart</button>
         </div>
@@ -64,18 +68,22 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Muhamad Alfian Widjaya</a>.
   </div>
 
   <div class="modal" id="modals">
     <button onclick="closeModal()" id="btnClose"><img src="./images/icon-close.svg" alt=""></button>
     <div class="warpModal">
-      <img src="./images/image-product-1.jpg" alt="" id="imgModal" class="imgModal">
+      <div class="cardContainModal">
+        <button id="btnPrevios" onclick="gantiFoto2()"><img src="./images/icon-previous.svg" alt="" ></button>
+        <img src="./images/image-product-1.jpg" alt="" id="imgModal" class="imgModal">
+        <button id="btnNext" onclick="gantiFoto1()"><img src="./images/icon-next.svg" alt=""></button>
+      </div>
       <div class="card1">
-        <img src="./images/image-product-1-thumbnail.jpg" alt="" id="imgList">
-        <img src="./images/image-product-2-thumbnail.jpg" alt="" id="imgList">
-        <img src="./images/image-product-3-thumbnail.jpg" alt="" id="imgList">
-        <img src="./images/image-product-4-thumbnail.jpg" alt="" id="imgList">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="" id="imgList" onclick="tampilkanFoto1('./images/image-product-1.jpg')">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="" id="imgList" onclick="tampilkanFoto1('./images/image-product-2.jpg')">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="" id="imgList" onclick="tampilkanFoto1('./images/image-product-3.jpg')">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="" id="imgList" onclick="tampilkanFoto1('./images/image-product-4.jpg')">
       </div>
     </div>
   </div>

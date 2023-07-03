@@ -59,6 +59,7 @@ li>a{
     width: 40px;
     box-sizing: border-box;
     object-fit: fill;
+    cursor: pointer;
 }
 
 .containerBody{
@@ -110,6 +111,7 @@ li>a{
 #imgContain{
     width: 400px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .card1{
@@ -121,6 +123,13 @@ li>a{
 #imgList{
     width: 80px;
     border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#imgList:hover{
+    box-shadow: 5px 5px 5px hsl(26, 100%, 55%);
+    transition: 0.5s;
 }
 
 .btn{
@@ -138,6 +147,7 @@ li>a{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .btn2{
@@ -151,6 +161,7 @@ li>a{
     height: 40px;
     width: 120px;
     background-color: #dfdfdf;
+    cursor: pointer;
 }
 
 #pulusMinus{
@@ -159,6 +170,7 @@ li>a{
     height: 100%;
     background-color: #dfdfdf;
     border: none;
+    cursor: pointer;
 }
 
 #modals{
@@ -189,8 +201,39 @@ li>a{
     background-color: hsl(26, 100%, 55%);
     border: none;
     margin-left: 350px;
+    cursor: pointer;
 }
 
 #imgModal{
     width: 550px;
+    cursor: pointer;
+}
+
+.cardContainModal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+
+#btnPrevios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#btnNext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
