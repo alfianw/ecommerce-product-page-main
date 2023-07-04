@@ -1,5 +1,16 @@
+// menampilkan modals
 function myFunction() {
   document.getElementById("modals").style.display = "block"
+}
+
+let cart = 1
+function openCart(){
+  cart++
+  if(cart %2 == 0){
+    document.getElementById("cartBtn").style.display="block"
+  }else if(cart % 2 == 1){
+    document.getElementById("cartBtn").style.display="none"
+  }
 }
 
 function closeModal() {

@@ -28,10 +28,16 @@
           <li><a href="">About</a></li>
         </ul>
         <div class="warpNav">
-          <img src="./images/icon-cart copy.svg" alt="" style="cursor: pointer">
+          <img src="./images/icon-cart copy.svg" alt="" style="cursor: pointer" onclick="openCart()">
           <img src="./images/image-avatar.png" alt="" id="avatar">
         </div>
       </nav>
+      <div class="cart" id="cartBtn">
+        <div class="titleCart">
+          <p>Cart</p>
+        </div>
+        <div class="cardCart" id="cardItem"></div>
+      </div>
     </header>
     <div class="containerBody">
       <div class="warp1">
@@ -88,6 +94,8 @@
     </div>
   </div>
 </body>
+
+
 
 <script src="index.js">
 </script>
