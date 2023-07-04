@@ -86,9 +86,14 @@ function createChart() {
     <article>
     <p id="status">Fall Limited Edition Sneakers $123.00 X <span>${nilai}</span> = <span>$${harga}</span></p>
     </article>
-    <button id="deleteBtn"><img src="./images/icon-delete.svg" alt=""></button>
+    <button id="deleteBtn" onclick="deleteCard(this)"><img src="./images/icon-delete.svg" alt=""></button>
     `;
-    const cardContainer = document.getElementById("cardItem");
+    const cardContainer = document.getElementById("cardList");
     cardContainer.appendChild(card);
   }
+}
+
+function deleteCard(button) {
+  const card = button.parentNode;
+  card.remove();
 }
