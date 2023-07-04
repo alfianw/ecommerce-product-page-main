@@ -4,12 +4,12 @@ function myFunction() {
 }
 
 let cart = 1
-function openCart(){
+function openCart() {
   cart++
-  if(cart %2 == 0){
-    document.getElementById("cartBtn").style.display="block"
-  }else if(cart % 2 == 1){
-    document.getElementById("cartBtn").style.display="none"
+  if (cart % 2 == 0) {
+    document.getElementById("cartBtn").style.display = "block"
+  } else if (cart % 2 == 1) {
+    document.getElementById("cartBtn").style.display = "none"
   }
 }
 
@@ -61,8 +61,34 @@ function gantiFoto2() {
   if (currentIndex > 0) {
     currentIndex--
     console.log(currentIndex)
-  }else if( currentIndex <= 0){
+  } else if (currentIndex <= 0) {
     currentIndex += 3
   }
   foto.src = fotoList[currentIndex];
+}
+
+function chartEmpty(){
+  document.getElementById("cartP").style.display = "none"
+  document.getElementById("checkoutBtn").style.display = "block"
+}
+
+function createChart() {
+  let harga = nilai * 12300;
+
+  if (nilai == 0) {
+    alert("Enter the number of products")
+  } else if(nilai > 0){
+    chartEmpty()
+    const card = document.createElement("div");
+    card.className = "cartItem"
+    card.innerHTML = `
+    <img src="./images/image-product-1-thumbnail.jpg" alt="" id="imgCart">
+    <article>
+    <p id="status">Fall Limited Edition Sneakers $123.00 X <span>${nilai}</span> = <span>$${harga}</span></p>
+    </article>
+    <button id="deleteBtn"><img src="./images/icon-delete.svg" alt=""></button>
+    `;
+    const cardContainer = document.getElementById("cardItem");
+    cardContainer.appendChild(card);
+  }
 }

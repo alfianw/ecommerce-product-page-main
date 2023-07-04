@@ -36,7 +36,12 @@
         <div class="titleCart">
           <p>Cart</p>
         </div>
-        <div class="cardCart" id="cardItem"></div>
+        <div class="cartWarp">
+          <div class="cardCart" id="cardItem">
+            <p id="cartP">Your cart is empty</p>
+          </div>
+          <button id="checkoutBtn">CheckOut</button>
+        </div>
       </div>
     </header>
     <div class="containerBody">
@@ -66,7 +71,7 @@
             <p id="jumlahProduk">0</p>
             <button id="pulusMinus" onclick="tambahProduk()"><img src="./images/icon-plus.svg" alt=""></button>
           </div>
-          <button id="btn1"><img src="./images/icon-cart.svg" alt="">Add to cart</button>
+          <button id="btn1" onclick="createChart()"><img src="./images/icon-cart.svg" alt="">Add to cart</button>
         </div>
       </div>
     </div>
@@ -94,9 +99,6 @@
     </div>
   </div>
 </body>
-
-
-
 <script src="index.js">
 </script>
 
