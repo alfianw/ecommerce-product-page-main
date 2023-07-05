@@ -18,10 +18,26 @@ function closeModal() {
 }
 
 let nilai = 0;
-
 function tambahProduk() {
   nilai += 1;
   document.getElementById("jumlahProduk").innerText = nilai;
+}
+
+let not = 0
+function notif(){
+  not++
+  document.getElementById("notifCart").innerText = not;
+  document.getElementById("notiff").style.display = "block";
+}
+
+function notifMin(){
+  not--
+  if(not > 0){
+    document.getElementById("notifCart").innerText = not;
+  }else if(not == 0){
+    document.getElementById("notiff").style.display = "none";
+    cartDelete()
+  }
 }
 
 function kurangProduk() {
@@ -67,6 +83,11 @@ function gantiFoto2() {
   foto.src = fotoList[currentIndex];
 }
 
+function cartDelete(){
+  document.getElementById("cartP").style.display = "block"
+  document.getElementById("checkoutBtn").style.display = "none"
+}
+
 function chartEmpty(){
   document.getElementById("cartP").style.display = "none"
   document.getElementById("checkoutBtn").style.display = "block"
@@ -90,10 +111,12 @@ function createChart() {
     `;
     const cardContainer = document.getElementById("cardList");
     cardContainer.appendChild(card);
+    notif()
   }
 }
 
 function deleteCard(button) {
   const card = button.parentNode;
   card.remove();
+  notifMin()
 }
